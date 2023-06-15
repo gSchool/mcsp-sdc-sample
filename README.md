@@ -21,6 +21,10 @@ It uses vite as the module bundler and dotenv for configuration. It's organized 
 1. Add your info in `.env`
 1. Run the app: `npm run dev`
 
+## License
+
+MIT
+
 ## Scripts
 
 **Root**
