@@ -20,7 +20,7 @@ app.get("/api/tasks/:id", (req, res) => {
   const id = req.params.id;
 
   sql`SELECT * FROM tasks WHERE id = ${id}`.then((rows) => {
-    res.send(rows);
+    res.send(rows[0]);
   });
 });
 
