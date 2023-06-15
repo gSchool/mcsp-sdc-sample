@@ -23,7 +23,7 @@ It uses vite as the module bundler and dotenv for configuration. It's organized 
 
 ## License
 
-MIT
+OOPSIE
 
 ## Scripts
 
