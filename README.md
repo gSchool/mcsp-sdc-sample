@@ -25,6 +25,7 @@ It uses vite as the module bundler and dotenv for configuration. It's organized 
 
 GNU AGPLv3
 TIMBO
+OOPSIE
 
 ## Scripts
 
