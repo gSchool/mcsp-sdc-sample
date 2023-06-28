@@ -2,11 +2,12 @@ DROP TABLE IF EXISTS tasks;
 
 CREATE TABLE tasks (
   id SERIAL,
-  description TEXT
+  description TEXT,
+  priority NUMERIC
 );
 
-INSERT INTO tasks(description) VALUES('Do the dishes');
-INSERT INTO tasks(description) VALUES('Walk the dog');
-INSERT INTO tasks(description) VALUES('Sweep the floor');
-INSERT INTO tasks(description) VALUES('Do your homework');
-INSERT INTO tasks(description) VALUES('Beat Elden Ring');
+INSERT INTO tasks(description, priority) VALUES('Do the dishes', 2);
+INSERT INTO tasks(description, priority) VALUES('Walk the dog', 1);
+INSERT INTO tasks(description, priority) VALUES('Sweep the floor', 2);
+INSERT INTO tasks(description, priority) VALUES('Do your homework', 3);
+INSERT INTO tasks(description, priority) VALUES('Beat Elden Ring', 2);
