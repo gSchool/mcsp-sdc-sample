@@ -15,17 +15,15 @@ await client.connect();
 app.use(express.json());
 
 app.get("/api/tasks", async (req, res) => {
-  // if ((await client.exists("all_tasks")) === 1) {
-  //   const tasks = await client.get("all_tasks");
-  //   console.log("using tasks from cache");
-  //   res.send(JSON.parse(tasks));
-  // } else {
-  sql`SELECT * FROM tasks`.then((rows) => {
-    console.log("using tasks from db");
-    client.set("all_tasks", JSON.stringify(rows));
-    res.send(rows);
-  });
-  // }
+  if ((await client.exists("all_tasks")) === 1) {
+    const tasks = await client.get("all_tasks");
+    res.send(JSON.parse(tasks));
+  } else {
+    sql`SELECT * FROM tasks`.then((rows) => {
+      client.set("all_tasks", JSON.stringify(rows));
+      res.send(rows);
+    });
+  }
 });
 
 app.get("/api/tasks/:id", (req, res) => {
