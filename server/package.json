@@ -3,16 +3,18 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js"
+    "dev": "node --watch index.js",
+    "start": "node index.js",
+    "bulk-insert": "node bulk-insert.js",
+    "benchmark": "k6 run benchmarking.js"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "@faker-js/faker": "^8.3.1",
+    "k6": "^0.0.0"
   },
   "dependencies": {
-    "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.17.3",
-    "postgres": "^3.3.3"
+    "pg": "^8.11.3"
   }
 }

@@ -1,25 +1,22 @@
-# Full-Stack React Example
+# SDC Sample Repo
 
-This repo contains an example of a full-stack application with an express backend and a React frontend.
+This repo contains examples of gathering metrics about your application's performance and can be helpful while working through SDC.
 
-It uses vite as the module bundler and dotenv for configuration. It's organized as a mono-repo using [npm workspaces](https://docs.npmjs.com/cli/v7/using-npm/workspaces) which allows us to have our client and server in one repo.
+## Included Examples
 
-> **Note**: When you run `npm install` at the root, it will install all dependencies listed in `package.json`, `server/package.json`, and `client/package.json`.
+### Bulk Inserting Data into Postgres
 
-## Customizing the Template
+In `server/bulk-insert.js`, there is an example of a script for bulk-inserting large amounts of data into a postgres database in an efficient way. It works by writing large amounts of data to a file and bulk-loading that file into the database using the `COPY` clause.
 
-1. Create new repo using this one as a template.
-1. Pull that repo down.
-1. Update `./server/migration.sql` to the schema for your application.
+### Running k6 Against Your API
+
+To run k6 load-testing benchmarks against your API, you first need to install k6 on your machine. You can do so by following the instructions [here](https://k6.io/docs/get-started/installation/). Once that is done, you should be able to run `k6 run server/benchmarking.js` and see your results.
 
 ## Development Setup
 
 1. Install dependencies: `npm install`
-1. Create your database: `createdb YOUR_DB`
-1. Run your migrations: `psql -f server/migration.sql YOUR_DB`
-1. Create your `.env` file: `cp .env.template .env`
-1. Add your info in `.env`
-1. Run the app: `npm run dev`
+1. Create the database: `createdb todo`
+1. Run your migrations: `psql -f server/migration.sql todo`
 
 ## Scripts
 

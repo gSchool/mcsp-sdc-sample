@@ -7,6 +7,7 @@ export const options = {
 };
 
 export default function () {
+  // TODO: Change this to hit your API endpoint.
   http.get("http://localhost:3000/api/tasks");
   sleep(1);
 }

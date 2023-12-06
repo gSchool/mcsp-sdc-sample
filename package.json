@@ -13,10 +13,5 @@
   },
   "devDependencies": {
     "concurrently": "^7.1.0"
-  },
-  "dependencies": {
-    "@faker-js/faker": "^8.0.2",
-    "k6": "^0.0.0",
-    "redis": "^4.6.7"
   }
 }
